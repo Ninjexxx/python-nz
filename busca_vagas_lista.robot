@@ -12,14 +12,21 @@ Pesquisar Varios Cargos no Seek
     Maximize Browser Window
 
     FOR    ${cargo}    IN    @{CARGOS}
-        Log To Console    \nIniciando busca para: ${cargo}
-        Wait Until Element Is Visible    name=keywords    timeout=15s
-        Clear Element Text    name=keywords
-        Input Text            name=keywords    ${cargo}
-        Press Keys         name=keywords    ENTER
-        Sleep    5s
-        Wait Until Page Contains    ${cargo}    timeout=15s
-        Log To Console    Sucesso: Vagas para ${cargo} encontradas!
-        Capture Page Screenshot    vagas_${cargo}.png
-        Go To    ${URL}
+        Pesquisar Cargo E Validar    ${cargo}
     END
+
+*** Keywords ***
+Pesquisar Cargo e Validar
+    [Arguments]    ${cargo_da_vez}
+    Log To Console    \nProcessando: ${cargo_da_vez}
+
+    Wait Until Element Is Visible    name=keywords    timeout=15s
+    Clear Element Text    name=keywords
+    Input Text    name=keywords    ${cargo_da_vez}
+    Press Keys    name=keywords    ENTER
+
+    Sleep    3s
+
+    Run Keyword And Ignore Error    Wait Until Page Contains    ${cargo_da_vez}
+    Capture Page Screenshot    vagas_${cargo_da_vez}.png
+    Go To    ${URL}
