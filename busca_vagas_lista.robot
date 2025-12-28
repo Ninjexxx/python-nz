@@ -12,7 +12,7 @@ Pesquisar Varios Cargos no Seek
     Maximize Browser Window
 
     FOR    ${cargo}    IN    @{CARGOS}
-        Pesquisar Cargo E Validar    ${cargo}
+        Pesquisar Cargo e Validar    ${cargo}
     END
 
 *** Keywords ***
