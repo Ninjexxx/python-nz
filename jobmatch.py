@@ -1,25 +1,25 @@
-meus_conhecimentos = ["Python", "Robot Framework", "ServiceNow", "Git"]
+my_skills = ["Python", "Robot Framework", "ServiceNow", "Git", "Manual Testing"]
 
-requisitos_vaga = ["Python", "Playwright", "Git", "Robot Framework", "Agile"]
+job_requirements = ["Python", "Playwright", "Git", "Robot Framework", "Agile", "ServiceNow"]
 
 matches = 0
 
-print("--- Analisando Requisitos da Vaga ---")
+print("--- Analyzing Job Requirements ---")
 
-for item in requisitos_vaga:
-    if item in meus_conhecimentos:
-        print(f"[CHECK] Tu já sabes: {item}")
+for skill in job_requirements:
+    if skill in my_skills:
+        print(f"[MATCH] Requirement met: {skill}")
         matches += 1
     else:
-        print(f"[FALTA] Requisito pendente: {item}")
+        print(f"[MISSING] Skill to develop: {skill}")
 
-total_requisitos = len(requisitos_vaga)
-aproveitamento = (matches / total_requisitos) * 100
+total_reqs = len(job_requirements)
+match_rate = (matches / total_reqs) * 100
 
-print(f"\nResultado: Tu atendes a {matches} de {total_requisitos} requisitos.")
-print(f"Teu 'Match' com esta vaga é de {aproveitamento}%")
+print(f"\nSummary: {matches} out of {total_reqs} skills matched.")
+print(f"Match Rate: {match_rate:.2f}%")
 
-if aproveitamento >= 70:
-    print("Conclusão: Tens grandes chances! Aplica para a vaga e foca no networking.")
+if match_rate >= 80:
+    print("Result: High probability! Time to apply and network.")
 else:
-    print("Conclusão: Continua os estudos. Foca nos itens 'pendentes' acima.")
+    print("Result: Keep studying. Focus on the 'Missing' items above.")

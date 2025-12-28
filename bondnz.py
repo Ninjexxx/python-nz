@@ -1,11 +1,16 @@
-aluguel = float (input("Qual é o valor do aluguel na semana?"))
+weekly_rent = float(input("What is the weekly rent amount (NZD)? "))
 
-calculo = aluguel * 6
+total_requirement = weekly_rent * 6
 
-limite = 2150
+budget_limit = 2150 
 
-if calculo <= limite:
-    print(f"Parabéns, valor ${calculo} no total está acessível! Faça uma visita.")
+print(f"--- Financial Summary ---")
+print(f"Total move-in cost: ${total_requirement:.2f}")
+
+if total_requirement <= budget_limit:
+    print(f"Success! The amount of ${total_requirement:.2f} is within your budget.")
+    print("You can proceed with the flat viewing.")
 else:
-    diferenca = calculo - limite
-    print(f"Atenção! Esse valor ultrapassa seu limite em ${diferenca}.")
+    difference = total_requirement - budget_limit
+    print(f"Warning! This total exceeds your safety limit by ${difference:.2f}.")
+    print("Recommendation: Look for a room under $350/week to stay safe.")
