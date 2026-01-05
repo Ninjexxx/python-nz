@@ -1,15 +1,10 @@
-# 1. Defina a taxa
-taxa = 3.16
+def convert_nzd_to_brl():
+    exchange_rate = 3.16
 
-# 2. Pergunte e GUARDE na variável (O input vem primeiro!)
-# Note que a variável 'valor_texto' fica na ESQUERDA do igual.
-valor_texto = input('Quanto é o valor em NZD para BRL? ')
+    value_text = input('Enter value in NZD: ')
+    value_number = float(value_text)
 
-# 3. Converta o texto para número
-valor_numero = float(valor_texto)
+    result = value_number * exchange_rate
+    print(result)
 
-# 4. Calcule (A variável 'resultado' que recebe o valor fica na ESQUERDA)
-resultado = valor_numero * taxa
-
-# 5. Mostre na tela
-print(resultado)
+convert_nzd_to_brl()
