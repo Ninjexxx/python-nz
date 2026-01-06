@@ -1,10 +1,10 @@
-def convert_nzd_to_brl():
+def convert_nzd_amount_to_brl():
     exchange_rate = 3.16
 
     value_text = input('Enter value in NZD: ')
-    value_number = float(value_text)
+    nzd_amount = float(value_text)
 
-    result = value_number * exchange_rate
-    print(result)
+    brl_amount = nzd_amount * exchange_rate
+    print(brl_amount)
 
-convert_nzd_to_brl()
+convert_nzd_amount_to_brl()
