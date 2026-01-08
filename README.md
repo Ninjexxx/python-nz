@@ -8,13 +8,3 @@ This repository documents my technical evolution towards the New Zealand technol
 * **Robot Framework**: Main framework for test automation.
 * **SeleniumLibrary**: Web navigation automation.
 * **Git/GitHub**: Version control and professional portfolio.
-
-## 📈 Weekly Evolution (December 2025)
-
-### Week 1: Fundamentals and First Automation
-* **Python Logic**: Developed currency converters and age validators for the Working Holiday Visa (`conversor.py` and `visto.py`).
-* **QA Environment**: Installation and configuration of Robot Framework and Selenium.
-* **First Robot**: Developed a script that automates opening and validating the New Zealand Immigration website (`primeiro_teste.robot`).
-* **Best Practices**: Refactored code using dynamic variables instead of static values.
-
----
