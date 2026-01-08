@@ -25,7 +25,7 @@ Pesquisar Cargo e Validar
     Input Text    name=keywords    ${cargo_da_vez}
     Press Keys    name=keywords    ENTER
 
-    Sleep    3s
+    Sleep    10s
 
     Run Keyword And Ignore Error    Wait Until Page Contains    ${cargo_da_vez}
     Capture Page Screenshot    vagas_${cargo_da_vez}.png
