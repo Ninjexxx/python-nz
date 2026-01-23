@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    car_titles.py
+Resource   trade_me_keywords.robot
 
 *** Variables ***
 ${URL}    https://www.trademe.co.nz/
@@ -14,10 +15,5 @@ Search For Car List On Trade Me Using Python Data
     ${cars}=    Get Search Terms
 
     FOR    ${car}    IN    @{cars}
-    Wait Until Element Is Visible    id=search
-    Input Text    id=search    ${car}
-    Press Keys    id=search    ENTER
-    Wait Until Page Contains        ${car}
-    Sleep                            3s
-    Go To                            ${URL}
+    Searching cars on Trade Me New Zealand    ${car}
     END
