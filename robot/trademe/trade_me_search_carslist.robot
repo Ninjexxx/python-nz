@@ -12,6 +12,7 @@ ${BROWSER}    chrome
 
 *** Test Cases ***
 Search For Car List On Trade Me Using Python Data
+    [Tags]    smoke    trademe    search
     ${cars}=    Get Search Terms
 
     FOR    ${car}    IN    @{cars}
