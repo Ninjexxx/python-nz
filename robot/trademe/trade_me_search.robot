@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    car_titles.py
+Library    ../../python/data/car_titles.py
 
 *** Variables ***
 ${URL}    https://www.trademe.co.nz/
