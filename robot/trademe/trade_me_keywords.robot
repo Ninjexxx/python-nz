@@ -21,6 +21,7 @@ Searching cars on Trade Me New Zealand
     Wait Until Location Contains    search    15s
     Sleep    5s
     Wait Until Page Contains    ${car}    10s
+    Wait Until Page Contains    Cars
 
 Close Trade Me Browser
     Close Browser
