@@ -4,7 +4,6 @@ Library    ../../python/data/car_titles.py
 Resource   trade_me_keywords.robot
 
 Suite Setup    Open Trade Me Browser    ${URL}    ${BROWSER}
-Suite Teardown  Close Trade Me Browser
 
 *** Variables ***
 ${URL}    https://www.trademe.co.nz/a/motors/cars

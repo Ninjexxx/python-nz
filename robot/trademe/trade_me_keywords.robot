@@ -24,6 +24,3 @@ Searching cars on Trade Me New Zealand
     ...    Should Not Be Equal    ${old_url}    Get Location
 
     Wait Until Page Contains    ${car}    15s
-
-Close Trade Me Browser
-    Close Browser
