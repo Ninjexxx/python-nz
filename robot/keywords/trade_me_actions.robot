@@ -14,3 +14,5 @@ Search For Car Brand
 
     Wait Until Keyword Succeeds    10x    2s
     ...    Should Not Be Equal    ${old_url}    Get Location
+
+    Search Result Should Match Term    ${car}
