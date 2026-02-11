@@ -14,9 +14,9 @@ ${BROWSER}  chrome
 
 *** Test Cases ***
 Search Cars Using Python Data
-    [Tags]    smoke    trademe
+    [Tags]    smoke    regression    trademe
 
-    ${cars}=    Get Search Terms
+    ${cars}=    Get Smoke Search Terms
     FOR    ${car}    IN    @{cars}
         Search For Car Brand    ${car}
     END
