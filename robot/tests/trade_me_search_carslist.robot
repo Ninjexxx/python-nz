@@ -7,6 +7,7 @@ Library     ../../python/data/car_titles.py
 
 Suite Setup     Open Trade Me Browser    ${URL}    ${BROWSER}
 Suite Teardown  Close Trade Me Browser
+Test Teardown   Run Keyword If Test Failed    Capture Page Screenshot
 
 *** Variables ***
 ${URL}      https://www.trademe.co.nz/a/motors/cars
