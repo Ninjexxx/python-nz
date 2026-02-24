@@ -21,3 +21,8 @@ Search Cars Using Python Data
     FOR    ${car}    IN    @{cars}
         Search For Car Brand    ${car}
     END
+
+Invalid Search Should Not Break System
+    [Tags]    regression    negative
+
+    Search For Car Brand    zzzzzzzzzzzz
